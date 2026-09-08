@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICHU — Tecnología para la Ganadería Inteligente</title>
+  <meta name="description" content="Tecnología para la ganadería inteligente que conecta información del ganado, gestión del campo y acompañamiento veterinario en el Perú.">
+  
+  <!-- Google Fonts: Outfit (Títulos Modernos con Carácter) + Plus Jakarta Sans (Cuerpo Legible y Limpio) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="ICHU_logo_pack/ICHU_Monograma_Transparente.png">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. HEADER STICKY & NAVEGACIÓN
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo" aria-label="ICHU - Inicio">
+        <img src="ICHU_logo_pack/ICHU_Principal_Transparente.png" alt="Logotipo ICHU" class="brand-logo-img">
+        <span class="brand-copy">
+          <strong>ICHU</strong>
+          <small>Plataforma ganadera para todos</small>
+        </span>
+      </a>
+
+      <!-- Navegación Desktop -->
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#quienes-somos" class="nav-link">Quiénes somos</a>
+        <a href="#para-ganaderos" class="nav-link">Para ganaderos</a>
+        <a href="#para-veterinarios" class="nav-link">Para veterinarios</a>
+        <a href="#tecnologia" class="nav-link">Tecnología</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Botón CTA Header -->
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-primary header-cta">
+          <span>Solicitar una demostración</span>
+        </a>
+
+        <!-- Botón Menú Móvil -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú Drawer Móvil -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <button class="close-btn" id="closeMobileNav" aria-label="Cerrar menú">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="mobile-nav-links">
+      <a href="#inicio" class="mobile-nav-link">Inicio</a>
+      <a href="#quienes-somos" class="mobile-nav-link">Quiénes somos</a>
+      <a href="#para-ganaderos" class="mobile-nav-link">Para ganaderos</a>
+      <a href="#para-veterinarios" class="mobile-nav-link">Para veterinarios</a>
+      <a href="#tecnologia" class="mobile-nav-link">Tecnología</a>
+      <a href="#contacto" class="mobile-nav-link">Contacto</a>
+    </div>
+    <a href="#contacto" class="btn btn-primary" style="width: 100%;">
+      <span>Solicitar una demostración</span>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       2. HERO SECTION (FOTOGRAFÍA REAL DE VACUNO + TELEMETRÍA)
+       ======================================================================== -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-grid-pattern" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Contenido Hero -->
+        <div class="hero-content fade-up">
+          <h1 class="hero-title">
+            Cada animal tiene una historia.
+            <span class="highlight">ICHU ayuda a contarla.</span>
+          </h1>
+
+          <p class="lead hero-description">
+            Tecnología pensada para la ganadería que conecta la información de cada ejemplar.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contacto" class="btn btn-primary btn-lg">
+              <span>Solicitar una demostración</span>
+            </a>
+            <a href="#como-funciona" class="btn btn-secondary btn-lg">
+              <span>Conocer cómo funciona</span>
+            </a>
+          </div>
+
+          <div class="hero-proof" aria-label="Resumen de la plataforma ICHU">
+            <span class="hero-proof-avatar"><i data-lucide="shield-check" style="width:17px; height:17px;"></i></span>
+            <span><strong>Información que acompaña</strong><br>al ganado y a quienes lo cuidan.</span>
+          </div>
+        </div>
+
+        <!-- Fotografía Real con Badges de Telemetría -->
+        <div class="hero-photo-wrapper fade-up">
+          <div class="hero-photo-card">
+            
+            <!-- Badges Flotantes de Datos Reales -->
+            <div class="telemetry-tag-floating tag-top-left">
+              <span class="indicator-pulse green"></span>
+              <span>Arete ID #PE-4092 • Registrado</span>
+            </div>
+
+            <div class="telemetry-tag-floating tag-top-right">
+              <span class="indicator-pulse red"></span>
+              <span>Temp: 38.6 °C — Rango Normal</span>
+            </div>
+
+            <div class="telemetry-tag-floating tag-bottom-left">
+              <span class="indicator-pulse blue"></span>
+              <span>Sector Pastoreo • Lote Principal</span>
+            </div>
+
+            <!-- Imagen Real de Ganado / Ganadero -->
+            <img src="Inicio.png" alt="Ganado en los Andes peruanos al amanecer" class="hero-photo-img">
+
+            <div class="hero-dashboard-card">
+              <div class="dashboard-card-topline">
+                <span>Vista del hato</span>
+                <span class="dashboard-live"><i></i> En vivo</span>
+              </div>
+              <div class="dashboard-card-stats">
+                <div><strong>24</strong><span>registrados</span></div>
+                <div><strong>98%</strong><span>estado óptimo</span></div>
+                <div><strong>03</strong><span>por revisar</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. QUIÉNES SOMOS
+       ======================================================================== -->
+  <section id="quienes-somos" class="who-we-are-section">
+    <div class="who-leaf who-leaf-left" aria-hidden="true"></div>
+    <div class="who-leaf who-leaf-right" aria-hidden="true"></div>
+    <div class="container who-we-are-grid">
+      <div class="who-image-wrap fade-up">
+        <div class="who-image-glow" aria-hidden="true"></div>
+        <img src="quienessomos.png" alt="Arete inteligente ICHU para el monitoreo del ganado">
+      </div>
+
+      <div class="who-content fade-up">
+        <span class="who-kicker">Desde 2026 · Perú</span>
+        <h2>Quiénes somos</h2>
+        <div class="who-rule"><span></span></div>
+        <p class="who-lead">Somos una empresa peruana que innova la ganadería con tecnología cercana, útil y pensada para la realidad del campo.</p>
+        <p>Desde 2026 desarrollamos ICHU: una plataforma que reúne la información de cada ejemplar, las señales del hato y el acompañamiento veterinario para tomar decisiones oportunas y cuidar mejor cada producción.</p>
+
+        <a href="#como-funciona" class="who-more" aria-label="Conoce más sobre ICHU">+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. SECCIÓN EL PROBLEMA
+       ======================================================================== -->
+  <section class="section-padding problem-section">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <h2>El campo tiene información.<br>El reto es convertirla en decisiones.</h2>
+        <p class="lead" style="margin-top: 1rem;">
+          La labor ganadera genera datos todos los días. Sin embargo, gran parte de este conocimiento se pierde o se queda fragmentado.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="book-open"></i>
+          </div>
+          <h3 class="problem-title">Registros manuales y dispersos</h3>
+          <p>Cuadernos de campo y notas sueltas que dificultan reconstruir el historial completo y continuo de cada animal cuando se necesita con urgencia.</p>
+        </div>
+
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="clock-alert"></i>
+          </div>
+          <h3 class="problem-title">Detección tardía de cambios</h3>
+          <p>Un descenso en el pastoreo, una variación térmica o un aislamiento en el potrero suelen notarse cuando el problema ya ha avanzado, elevando costos y riesgos.</p>
+        </div>
+
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="stethoscope"></i>
+          </div>
+          <h3 class="problem-title">Brecha en visitas veterinarias</h3>
+          <p>Cuando el médico veterinario llega al corral, muchas veces debe evaluar sin contar con la bitácora previa de síntomas, dosis aplicadas o fechas exactas.</p>
+        </div>
+
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <h3 class="problem-title">Control de pasturas y agua</h3>
+          <p>Supervisar la rotación de parcelas de pasto, la disponibilidad de aguadas y la ubicación de grupos de animales en terrenos amplios requiere tiempo constante.</p>
+        </div>
+
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="clipboard-list"></i>
+          </div>
+          <h3 class="problem-title">Seguimiento de costos y pérdidas</h3>
+          <p>Llevar un recuento claro de forraje adicional, tratamientos y mermas resulta complejo cuando no existe una estructura organizada para el registro.</p>
+        </div>
+
+        <div class="problem-card fade-up">
+          <div class="problem-icon-wrapper">
+            <i data-lucide="users"></i>
+          </div>
+          <h3 class="problem-title">Coordinación del equipo</h3>
+          <p>Dificultad para alinear lo que observa el personal de campo, lo que registra el administrador y las pautas que indica el especialista veterinario.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. SECCIÓN ¿QUÉ ES ICHU? (EL FLUJO DE VALOR)
+       ======================================================================== -->
+  <section id="como-funciona" class="section-padding about-section">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <h2>Una nueva forma de entender la ganadería.</h2>
+        <p class="lead" style="margin-top: 1rem;">
+          ICHU es una plataforma pensada para ayudar a ganaderos y veterinarios a organizar y entender mejor la información de cada animal y del campo.
+        </p>
+      </div>
+
+      <!-- Diagrama de Flujo Visual -->
+      <div class="flow-container fade-up">
+        <div class="flow-steps">
+          
+          <div class="flow-step">
+            <div class="flow-step-icon">
+              <i data-lucide="tag"></i>
+            </div>
+            <div class="flow-step-title">1. Animal</div>
+            <div class="flow-step-desc">Identificado individualmente con su arete y características.</div>
+          </div>
+
+          <div class="flow-arrow">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-icon">
+              <i data-lucide="activity"></i>
+            </div>
+            <div class="flow-step-title">2. Datos</div>
+            <div class="flow-step-desc">Señales de temperatura, movimiento, forraje y eventos.</div>
+          </div>
+
+          <div class="flow-arrow">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-icon">
+              <i data-lucide="user-check"></i>
+            </div>
+            <div class="flow-step-title">3. Ganadero</div>
+            <div class="flow-step-desc">Consulta el estado general del hato y recibe alertas tempranas.</div>
+          </div>
+
+          <div class="flow-arrow">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-icon">
+              <i data-lucide="stethoscope"></i>
+            </div>
+            <div class="flow-step-title">4. Veterinario</div>
+            <div class="flow-step-desc">Accede al historial clínico completo antes y durante la visita.</div>
+          </div>
+
+          <div class="flow-arrow">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-icon" style="background: var(--color-red-primary); color:#FFF; border-color: var(--color-red-primary);">
+              <i data-lucide="check-circle-2"></i>
+            </div>
+            <div class="flow-step-title">5. Decisión</div>
+            <div class="flow-step-desc">Acciones preventivas y oportunas que protegen la producción.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Frase Destacada de Confianza Profesional -->
+      <div class="quote-highlight-box fade-up">
+        <div>
+          <div class="quote-text">
+            “ICHU no reemplaza al veterinario. Le da más información para trabajar.”
+          </div>
+          <div class="quote-sub">
+            La tecnología observa y recopila patrones; el criterio profesional y el conocimiento ganadero definen la acción.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. SECCIÓN DUAL: PARA GANADEROS & PARA VETERINARIOS
+       ======================================================================== -->
+  <section class="section-padding dual-audience-section">
+    <div class="container">
+      
+      <!-- Fila 1: Para Ganaderos -->
+      <div id="para-ganaderos" class="split-feature-row fade-up">
+        <div class="split-feature-text">
+          <div class="section-tag">
+            <i data-lucide="mountain" style="width:14px; height:14px;"></i>
+            <span>Para Ganaderos</span>
+          </div>
+          <h2>Para quienes están todos los días en el campo.</h2>
+          <p>
+            Diseñado para simplificar la jornada de trabajo. Un espacio claro para tener el control de su ganado en la palma de la mano.
+          </p>
+
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Registro individual:</strong> Identificación clara de cada animal por arete, lote, raza y edad.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Observación de actividad:</strong> Conocer qué animales están pastando normalmente y cuáles muestran inmovilidad.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Alertas directas:</strong> Notificaciones cuando un animal se aparta o registra temperaturas anormales.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Gestión de insumos y aguadas:</strong> Anotación ágil de forraje, suministro de agua, gastos y registros de bajas.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Compartir con el veterinario:</strong> Enviar la ficha del animal con un solo toque previo a la visita.</span>
+            </li>
+          </ul>
+
+          <a href="#contacto" class="btn btn-secondary">
+            <span>Solicitar demostración para mi hato</span>
+          </a>
+        </div>
+
+        <!-- Card Visual con Foto Real + Mockup Estático -->
+        <div class="feature-photo-card">
+          <div class="feature-photo-img-wrap">
+            <img src="images.jpg" alt="Ganadero junto a su vacuno en el campo">
+            <div class="feature-photo-badge">
+              <span>Registro de campo · actualizado hoy</span>
+            </div>
+          </div>
+          <div class="feature-mockup-body">
+            <h4 style="font-size: 1.15rem; color: var(--color-red-primary); margin-bottom: 0.25rem;">
+              Ficha del ejemplar · #042
+            </h4>
+            <div style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Lote 03 - Pastizal Alto • Edad: 32 meses
+            </div>
+
+            <div class="mockup-stat-grid">
+              <div class="mockup-stat-box">
+                <div class="mockup-stat-val">38.5 °C</div>
+                <div class="mockup-stat-label">Temperatura</div>
+              </div>
+              <div class="mockup-stat-box">
+                <div class="mockup-stat-val" style="color: #10B981;">Óptimo</div>
+                <div class="mockup-stat-label">Estado</div>
+              </div>
+              <div class="mockup-stat-box">
+                <div class="mockup-stat-val">Sector A</div>
+                <div class="mockup-stat-label">Ubicación</div>
+              </div>
+            </div>
+
+            <div class="mockup-log-item">
+              <span>Suplementación de forraje</span>
+              <span class="text-muted">Hoy, 07:30 am</span>
+            </div>
+            <div class="mockup-log-item">
+              <span>Revisión de bebedero · Lote 3</span>
+              <span class="text-muted">Ayer, 04:15 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila 2: Para Veterinarios -->
+      <div id="para-veterinarios" class="split-feature-row reverse fade-up">
+        <div class="split-feature-text">
+          <div class="section-tag">
+            <i data-lucide="heart-pulse" style="width:14px; height:14px;"></i>
+            <span>Para Veterinarios</span>
+          </div>
+          <h2>Más información para mejores decisiones veterinarias.</h2>
+          <p>
+            Acceda a un historial cronológico fidedigno. Conozca qué ocurrió con el animal en los días previos, revise tendencias y respalde sus diagnósticos con datos contextuales reales.
+          </p>
+
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Historial clínico consolidado:</strong> Tratamientos previos, vacunas administradas, dosis y fechas exactas de visitas.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Evolución de variables vitales:</strong> Curvas de temperatura corporal y patrones de movimiento de los últimos días.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Registro de observaciones técnicas:</strong> Anotación de diagnósticos, recetas y recomendaciones para el productor.</span>
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-check"><i data-lucide="check" style="width:14px; height:14px;"></i></span>
+              <span><strong>Monitoreo post-tratamiento:</strong> Verificar si el animal recuperó su nivel de actividad regular.</span>
+            </li>
+          </ul>
+
+          <div style="background: var(--bg-red-tint); border-left: 3px solid var(--color-red-primary); padding: 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 2rem;">
+            <p style="font-weight: 600; font-size: 0.95rem; color: var(--color-red-primary);">
+              “El veterinario ve más contexto. El ganadero recibe mejor acompañamiento.”
+            </p>
+          </div>
+
+          <a href="#contacto" class="btn btn-secondary">
+            <span>Solicitar demostración para profesionales</span>
+          </a>
+        </div>
+
+        <!-- Card Visual con Foto Real de Trabajo Veterinario en Campo -->
+        <div class="feature-photo-card">
+          <div class="feature-photo-img-wrap">
+            <img src="images (1).jpg" alt="Médico veterinario realizando chequeo y evaluación en manga de manejo">
+            <div class="feature-photo-badge">
+              <span>Evaluación sanitaria · corral</span>
+            </div>
+          </div>
+          <div class="feature-mockup-body">
+            <h4 style="font-size: 1.15rem; color: var(--color-red-primary); margin-bottom: 0.25rem;">
+              Ficha Clínica • Vaca Holstein #118
+            </h4>
+            <div style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Registro de visita médica y seguimiento de evolución
+            </div>
+
+            <!-- Curva Térmica Conceptual -->
+            <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.85rem; margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700; color: var(--text-black); margin-bottom: 0.35rem;">
+                <span>Curva Térmica (Últimos 5 días)</span>
+                <span class="text-red">38.4°C → 38.6°C</span>
+              </div>
+              <svg viewBox="0 0 280 40" style="width: 100%; height: 40px;" fill="none">
+                <path d="M5 30 Q 60 28, 100 24 T 170 10 T 230 20 T 275 25" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="170" cy="10" r="3.5" fill="#991B1B" />
+              </svg>
+            </div>
+
+            <div class="mockup-log-item">
+              <span>Evaluación general: condición corporal 3.5</span>
+              <span class="text-muted">Dr. M. Quispe</span>
+            </div>
+            <div class="mockup-log-item">
+              <span>Aplicación antiparasitario de amplio espectro</span>
+              <span class="text-red" style="font-weight: 600;">Dosis completada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. SECCIÓN "CADA ANIMAL, UNA HISTORIA" (TIMELINE CON FOTOS TIERNAS)
+       ======================================================================== -->
+  <section class="section-padding story-section">
+    <div class="container">
+      
+      <!-- Fila Introductoria con Foto Real de Cuidado y Ternura Animal -->
+      <div class="story-intro-grid fade-up">
+        <div class="story-photo-box">
+          <img src="9c7a85405ab56199e5bf1cc2c9ac2e8b.jpg" alt="Ternero descansando plácidamente en el establo">
+        </div>
+        <div>
+          <div class="section-tag">
+            <i data-lucide="history" style="width:14px; height:14px;"></i>
+            <span>Trazabilidad y Bienestar</span>
+          </div>
+          <h2>Cada animal, una historia continua.</h2>
+          <p class="lead" style="margin-top: 1rem;">
+            La ganadería no es una hoja de cálculo estática: es un ciclo biológico vivo. ICHU organiza los hitos fundamentales de la vida de cada ejemplar para preservar su memoria productiva y sanitaria desde sus primeros días.
+          </p>
+        </div>
+      </div>
+
+      <!-- Línea de Tiempo de 7 Pasos -->
+      <div class="story-timeline-track fade-up">
+        
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="fingerprint"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 01</div>
+          <div class="timeline-step-title">Identificación</div>
+          <div class="timeline-step-text">Asignación de arete, genealogía, fecha de nacimiento y características.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="footprints"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 02</div>
+          <div class="timeline-step-title">Actividad</div>
+          <div class="timeline-step-text">Observación de rutinas de pastoreo, desplazamiento y descanso.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="wheat"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 03</div>
+          <div class="timeline-step-title">Alimentación</div>
+          <div class="timeline-step-text">Rotación de pastos, suplementación mineral y acceso a agua.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="bell-ring"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 04</div>
+          <div class="timeline-step-title">Eventos</div>
+          <div class="timeline-step-text">Registro de celos, servicios, partos, destetes o cambios repentinos.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="stethoscope"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 05</div>
+          <div class="timeline-step-title">Visita Médica</div>
+          <div class="timeline-step-text">Revisión clínica presencial respaldada con la lectura de datos.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="pill"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 06</div>
+          <div class="timeline-step-title">Tratamiento</div>
+          <div class="timeline-step-text">Aplicación de medicamentos o vacunas con registro de dosis.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-bullet">
+            <i data-lucide="line-chart"></i>
+          </div>
+          <div class="timeline-step-num">ETAPA 07</div>
+          <div class="timeline-step-title">Seguimiento</div>
+          <div class="timeline-step-text">Comprobación de recuperación y continuidad productiva.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. SECCIÓN TECNOLOGÍA & IOT
+       ======================================================================== -->
+  <section id="tecnologia" class="section-padding tech-section">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <div class="section-tag">
+          <i data-lucide="cpu" style="width:14px; height:14px;"></i>
+          <span>Ingeniería para el Campo</span>
+        </div>
+        <h2>Tecnología que observa.<br>Personas que deciden.</h2>
+        <p class="lead" style="margin-top: 1rem;">
+          ICHU está siendo concebida para conectarse progresivamente con dispositivos de telemetría e Internet de las Cosas (IoT) diseñados para soportar el clima y las condiciones de nuestra geografía.
+        </p>
+      </div>
+
+      <div class="tech-cards-grid">
+        
+        <div class="tech-card fade-up">
+          <div class="tech-card-icon">
+            <i data-lucide="thermometer"></i>
+          </div>
+          <h3>Temperatura Corporal</h3>
+          <p style="margin-top: 0.75rem;">
+            Monitoreo de oscilaciones térmicas para identificar tempranamente cuadros febriles, estrés calórico o alteraciones metabólicas antes de síntomas visibles.
+          </p>
+        </div>
+
+        <div class="tech-card fade-up">
+          <div class="tech-card-icon">
+            <i data-lucide="activity"></i>
+          </div>
+          <h3>Movimiento & Dinámica</h3>
+          <p style="margin-top: 0.75rem;">
+            Detección de índices de actividad física, rumiación, tiempo de descanso o letargo que puedan sugerir malestar, celo o inicio de parto.
+          </p>
+        </div>
+
+        <div class="tech-card fade-up">
+          <div class="tech-card-icon">
+            <i data-lucide="navigation"></i>
+          </div>
+          <h3>Ubicación en Terreno</h3>
+          <p style="margin-top: 0.75rem;">
+            Localización por sectores y potreros para prevenir pérdidas por extravío, optimizar el pastoreo rotativo y resguardar la seguridad del ganado.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. SECCIÓN DE ALERTAS CONCEPTUALES
+       ======================================================================== -->
+  <section class="section-padding alerts-section">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <div class="section-tag">
+          <i data-lucide="bell" style="width:14px; height:14px;"></i>
+          <span>Señales Claras</span>
+        </div>
+        <h2>Alertas preventivas, no diagnósticos automáticos.</h2>
+        <p class="lead" style="margin-top: 1rem;">
+          Las alertas de ICHU funcionan como un llamado de atención oportuno para que el ganadero o veterinario inspeccione al animal a tiempo.
+        </p>
+      </div>
+
+      <div class="alerts-grid">
+        
+        <div class="alert-preview-card fade-up">
+          <span class="alert-type-badge badge-warning">
+            <i data-lucide="zap" style="width:12px; height:12px;"></i>
+            <span>Actividad</span>
+          </span>
+          <div class="alert-preview-title">Cambio de actividad detectado</div>
+          <div class="alert-preview-desc">
+            Vaca #089 registró 45% menos desplazamiento durante las últimas 6 horas de pastoreo habitual.
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Sector Potrero B • Hace 25 min</div>
+        </div>
+
+        <div class="alert-preview-card fade-up">
+          <span class="alert-type-badge badge-reminder">
+            <i data-lucide="thermometer" style="width:12px; height:12px;"></i>
+            <span>Temperatura</span>
+          </span>
+          <div class="alert-preview-title">Temperatura fuera de rango</div>
+          <div class="alert-preview-desc">
+            Toro #014 registró 39.4 °C de manera sostenida en dos lecturas consecutivas.
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Lote Reproductores • Hace 1 hora</div>
+        </div>
+
+        <div class="alert-preview-card fade-up">
+          <span class="alert-type-badge badge-location">
+            <i data-lucide="map-pin" style="width:12px; height:12px;"></i>
+            <span>Ubicación</span>
+          </span>
+          <div class="alert-preview-title">Animal fuera de zona habitual</div>
+          <div class="alert-preview-desc">
+            Grupo de 3 vaquillonas detectadas próximas al cerco perimetral este.
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Cerco Este Quebrada • Hace 12 min</div>
+        </div>
+
+        <div class="alert-preview-card fade-up">
+          <span class="alert-type-badge badge-info">
+            <i data-lucide="calendar" style="width:12px; height:12px;"></i>
+            <span>Sanidad</span>
+          </span>
+          <div class="alert-preview-title">Seguimiento veterinario pendiente</div>
+          <div class="alert-preview-desc">
+            Recordatorio de segunda dosis de tratamiento prescrito para Ternero #201.
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Programado para hoy • 02:00 pm</div>
+        </div>
+
+      </div>
+
+      <!-- Disclaimer Ético -->
+      <div class="ethical-disclaimer fade-up">
+        <i data-lucide="info" style="width:20px; height:20px; color: var(--color-red-primary); flex-shrink: 0;"></i>
+        <span>
+          <strong>Nota de responsabilidad técnica:</strong> Las alertas y métricas mostradas son herramientas de orientación conceptual. No constituyen un diagnóstico clínico automatizado ni sustituyen el juicio profesional del médico veterinario.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. MAPA & GESTIÓN DEL CAMPO
+       ======================================================================== -->
+  <section class="section-padding field-map-section">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <div class="section-tag">
+          <i data-lucide="map" style="width:14px; height:14px;"></i>
+          <span>Manejo Integral del Predio</span>
+        </div>
+        <h2>También se trata de entender el campo.</h2>
+        <p class="lead" style="margin-top: 1rem;">
+          El animal depende de sus pasturas, el agua y la administración del predio. ICHU ayuda a visualizar la finca como una operación ordenada.
+        </p>
+      </div>
+
+      <div class="map-showcase-card fade-up">
+        <div class="map-visual-canvas field-photo-canvas">
+          <img src="parcela.jpg" alt="Vista aérea de las parcelas y sectores del predio" class="field-photo">
+          <span class="field-marker marker-one">Pastoreo</span>
+          <span class="field-marker marker-two">Aguada</span>
+        </div>
+
+        <div class="map-info-panel">
+          <h3>El campo en una sola vista</h3>
+          <p style="font-size: 0.95rem; margin-top: 0.5rem;">
+            Administre la rotación de forraje, planifique los suministros hídricos y mantenga un inventario vivo de animales sin depender de hojas sueltas.
+          </p>
+
+          <div class="map-features-grid">
+            <div class="map-feature-item">
+              <div class="map-feature-icon"><i data-lucide="droplet" style="width:18px; height:18px;"></i></div>
+              <div>
+                <strong style="font-size: 0.9rem; color: var(--text-black);">Puntos de Agua</strong>
+                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Disponibilidad en bebederos.</p>
+              </div>
+            </div>
+
+            <div class="map-feature-item">
+              <div class="map-feature-icon"><i data-lucide="rotate-cw" style="width:18px; height:18px;"></i></div>
+              <div>
+                <strong style="font-size: 0.9rem; color: var(--text-black);">Rotación de Pastos</strong>
+                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Recuperación de canchas.</p>
+              </div>
+            </div>
+
+            <div class="map-feature-item">
+              <div class="map-feature-icon"><i data-lucide="file-text" style="width:18px; height:18px;"></i></div>
+              <div>
+                <strong style="font-size: 0.9rem; color: var(--text-black);">Gastos & Insumos</strong>
+                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Control de forraje y fármacos.</p>
+              </div>
+            </div>
+
+            <div class="map-feature-item">
+              <div class="map-feature-icon"><i data-lucide="check-circle" style="width:18px; height:18px;"></i></div>
+              <div>
+                <strong style="font-size: 0.9rem; color: var(--text-black);">Inventario Vivo</strong>
+                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Nacimientos y traslados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. CONFIANZA & CONTEXTO PERUANO
+       ======================================================================== -->
+  <section class="section-padding trust-section">
+    <div class="container">
+      <div class="trust-box fade-up">
+        <div class="section-tag">
+          <i data-lucide="landmark" style="width:14px; height:14px;"></i>
+          <span>Contexto Nacional y Buenas Prácticas</span>
+        </div>
+        
+        <h2>Tecnología pensada para nuestra ganadería.</h2>
+        
+        <p class="lead" style="margin-top: 1rem;">
+          La gestión ganadera involucra compromisos sanitarios y normativas oficiales. ICHU busca facilitar la organización de información útil para la gestión productiva y veterinaria, dentro del marco de las obligaciones aplicables a cada actividad.
+        </p>
+
+        <div class="trust-sources-grid">
+          
+          <div class="trust-source-card">
+            <div class="trust-source-name">MIDAGRI</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">
+              Ministerio de Desarrollo Agrario y Riego: Políticas de desarrollo pecuario, pastos y fomento productivo.
+            </p>
+            <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener noreferrer" class="trust-source-link">
+              <span>Portal institucional</span>
+              <i data-lucide="external-link" style="width:14px; height:14px;"></i>
+            </a>
+          </div>
+
+          <div class="trust-source-card">
+            <div class="trust-source-name">SENASA</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">
+              Servicio Nacional de Sanidad Agraria: Calendarios de vacunación oficial, control zoosanitario y aretado.
+            </p>
+            <a href="https://www.gob.pe/senasa" target="_blank" rel="noopener noreferrer" class="trust-source-link">
+              <span>Normativa sanitaria</span>
+              <i data-lucide="external-link" style="width:14px; height:14px;"></i>
+            </a>
+          </div>
+
+          <div class="trust-source-card">
+            <div class="trust-source-name">Padrón de Productores (PPA)</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">
+              PPA (MIDAGRI): Registro oficial para la identificación y acceso a servicios del Estado.
+            </p>
+            <a href="https://ppa.midagri.gob.pe" target="_blank" rel="noopener noreferrer" class="trust-source-link">
+              <span>Información PPA</span>
+              <i data-lucide="external-link" style="width:14px; height:14px;"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. SECCIÓN CONTACTO CON SMARTPHONE INTERACTIVO (SIMULADOR DE MENSAJES)
+       ======================================================================== -->
+  <section id="contacto" class="section-padding contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Formulario de Demostración -->
+        <div class="contact-form-card fade-up">
+          <div class="section-tag">
+            <i data-lucide="sparkles" style="width:14px; height:14px;"></i>
+            <span>Acceso Temprano & Demostraciones</span>
+          </div>
+          <h2>Conoce ICHU antes que nadie.</h2>
+          <p style="margin-top: 0.5rem; margin-bottom: 2rem; color: var(--text-muted);">
+            Estamos construyendo una nueva forma de conectar tecnología, ganadería y acompañamiento veterinario. Déjanos tus datos para coordinar una presentación guiada.
+          </p>
+
+          <form id="demoRequestForm" novalidate>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. Carlos" required>
+              </div>
+              <div class="form-group">
+                <label for="apellidos" class="form-label">Apellidos *</label>
+                <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Ej. Quispe" required>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="correo" class="form-label">Correo Electrónico *</label>
+                <input type="email" id="correo" name="correo" class="form-control" placeholder="carlos@correo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono / WhatsApp *</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+51 987 654 321" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tipoUsuario" class="form-label">Tipo de Usuario *</label>
+              <select id="tipoUsuario" name="tipoUsuario" class="form-control" required>
+                <option value="" disabled selected>Selecciona tu perfil principal</option>
+                <option value="Ganadero">Ganadero / Productor Pecuario</option>
+                <option value="Veterinario">Médico Veterinario / Zootecnista</option>
+                <option value="Asociacion">Asociación / Cooperativa Agraria</option>
+                <option value="Otro">Otro interesado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje o consulta (Opcional)</label>
+              <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Cuéntanos sobre tu hato o qué te gustaría conocer en la demostración..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+              <span>Solicitar una demostración</span>
+              <i data-lucide="send" style="width:18px; height:18px;"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Smartphone Interactivo Simulando Chat de Contacto -->
+        <div class="phone-mockup-wrapper fade-up">
+          <div class="smartphone-device">
+            <div class="smartphone-screen">
+              
+              <!-- Notch Superior -->
+              <div class="phone-notch"></div>
+
+              <!-- Cabecera de la App ICHU Chat -->
+              <div class="phone-app-header">
+                <div class="phone-app-avatar">IC</div>
+                <div>
+                  <div class="phone-app-title">ICHU — Asistencia en Vivo</div>
+                  <div class="phone-app-status">● En línea para demostraciones</div>
+                </div>
+              </div>
+
+              <!-- Mensajes del Chat Simulados -->
+              <div class="phone-chat-messages" id="phoneChatMessages">
+                <div class="chat-bubble incoming">
+                  <div>¡Hola! 👋 Bienvenido a <strong>ICHU</strong>. ¿Te gustaría agendar una demostración para tu ganado o conocer el historial clínico?</div>
+                  <div class="chat-time">09:15 am</div>
+                </div>
+
+                <div class="chat-bubble outgoing">
+                  <div>Hola, tengo un hato ganadero y quiero ver cómo registran los aretes y las alertas de temperatura.</div>
+                  <div class="chat-time">09:16 am</div>
+                </div>
+
+                <div class="chat-bubble incoming">
+                  <div>¡Excelente! En la demo personalizada te mostraremos cómo opera la ficha de cada animal y cómo se conecta con el veterinario. Escríbenos aquí o completa el formulario. 🐄✨</div>
+                  <div class="chat-time">09:16 am</div>
+                </div>
+              </div>
+
+              <!-- Botones Rápidos Interactivos -->
+              <div class="phone-quick-chips">
+                <button class="quick-chip-btn" data-msg="Quiero ver la demo para ganaderos">🌾 Demo Ganaderos</button>
+                <button class="quick-chip-btn" data-msg="Soy veterinario y busco historial clínico">🩺 Soy Veterinario</button>
+                <button class="quick-chip-btn" data-msg="¿Cómo funcionan los sensores en campo?">📡 Sensores IoT</button>
+              </div>
+
+              <!-- Barra de Entrada de Chat Interactiva -->
+              <div class="phone-chat-input-bar">
+                <input type="text" id="phoneChatInput" class="phone-input" placeholder="Escribe un mensaje de prueba...">
+                <button id="phoneSendBtn" class="phone-send-btn" aria-label="Enviar mensaje">
+                  <i data-lucide="send" style="width:14px; height:14px;"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Confirmación -->
+  <div class="demo-modal-overlay" id="demoModalOverlay" role="dialog" aria-modal="true">
+    <div class="demo-modal-content">
+      <div class="modal-icon-wrap">
+        <i data-lucide="check-circle" style="width:36px; height:36px;"></i>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">¡Solicitud Recibida con Éxito!</h3>
+      <p style="margin-bottom: 2rem; color: var(--text-muted);">
+        Gracias por tu interés en <strong>ICHU</strong>. Nos comunicaremos contigo a la brevedad para coordinar tu demostración personalizada.
+      </p>
+      <button class="btn btn-primary" id="closeDemoModal">
+        <span>Entendido, muchas gracias</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       12. CTA FINAL EMOCIONAL
+       ======================================================================== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta-card fade-up">
+        <h2>Conoce tu ganado.<br>Entiende tu campo.<br><span class="text-red">Decide mejor.</span></h2>
+        
+        <p class="lead" style="max-width: 620px; margin: 1.5rem auto 2.5rem auto;">
+          El campo sabe. ICHU ayuda a convertir ese conocimiento en información clara y oportuna para proteger el fruto de tu trabajo.
+        </p>
+
+        <a href="#contacto" class="btn btn-primary btn-lg">
+          <span>Solicitar una demostración</span>
+          <i data-lucide="arrow-up-right" style="width:18px; height:18px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       13. FOOTER INSTITUCIONAL
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <img src="ICHU_logo_pack/ICHU_Principal_Transparente.png" alt="ICHU Logo" style="height: 44px;">
+          <p>
+            Tecnología para la ganadería inteligente. Conectando al ganadero con información útil sobre cada animal y facilitando el trabajo veterinario en el Perú.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navegación</div>
+          <ul class="footer-links">
+            <li><a href="#inicio" class="footer-link">Inicio</a></li>
+            <li><a href="#como-funciona" class="footer-link">Cómo funciona</a></li>
+            <li><a href="#para-ganaderos" class="footer-link">Para ganaderos</a></li>
+            <li><a href="#para-veterinarios" class="footer-link">Para veterinarios</a></li>
+            <li><a href="#tecnologia" class="footer-link">Tecnología</a></li>
+            <li><a href="#contacto" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Fuentes de Referencia</div>
+          <ul class="footer-links">
+            <li><a href="https://www.gob.pe/midagri" target="_blank" rel="noopener noreferrer" class="footer-link">MIDAGRI Perú</a></li>
+            <li><a href="https://www.gob.pe/senasa" target="_blank" rel="noopener noreferrer" class="footer-link">SENASA Sanidad Agraria</a></li>
+            <li><a href="https://ppa.midagri.gob.pe" target="_blank" rel="noopener noreferrer" class="footer-link">Padrón de Productores (PPA)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Identidad</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+            Inspirado en el pasto andino <em>ichu</em> y la tradición ganadera del Perú. Diseñado para la realidad y el trabajo diario en el campo.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 ICHU — Todos los derechos reservados. Etapa de presentación y demostración de producto.
+        </div>
+        <div>
+          Perú • Tecnología Ganadera & Acompañamiento Veterinario
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

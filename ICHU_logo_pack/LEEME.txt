@@ -1,0 +1,19 @@
+ICHU — paquete de logos
+=========================
+
+PRINCIPAL
+- ICHU_Principal_Alta.png — logo completo, alta resolución
+- ICHU_Principal.jpg — versión JPG
+- ICHU_Principal_Transparente.png — fondo transparente
+
+MONOGRAMA / MÓVIL
+- ICHU_Monograma_Alta.png — versión compacta
+- ICHU_Monograma.jpg — versión JPG
+- ICHU_Monograma_Transparente.png — transparente
+- ICHU_Movil_Logo.png — composición cuadrada para perfiles
+- ICHU_Movil_Logo.jpg — JPG para perfiles
+- ICHU_Movil_Monograma.png — versión compacta cuadrada
+- ICHU_Movil_Monograma.jpg — JPG
+- ICHU_Movil_Transparente.png — monograma transparente
+
+Nota: estos archivos parten de las imágenes originales proporcionadas y han sido reescalados con interpolación de alta calidad y enfoque ligero. Para imprenta profesional, lo ideal sería posteriormente vectorizar/redibujar el símbolo y tipografía.
