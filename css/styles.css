@@ -788,6 +788,8 @@ p { color: var(--ink-500); }
 
 @media (max-width: 960px) {
   .media-section { padding: 4.5rem 0; }
+  .media-page { padding-top: 8.5rem; }
+  .how-page { padding-top: 8.5rem; padding-bottom: 4.5rem; }
   .media-block,
   .media-block:nth-of-type(even) { grid-template-columns: 1fr; gap: 1.6rem; }
   .media-block:nth-of-type(even) .video-frame { order: 0; }
@@ -1753,6 +1755,7 @@ p { color: var(--ink-500); }
 @media (max-width: 1200px) {
   .main-nav { display: none; }
   .menu-toggle { display: flex; }
+  .header-inner { gap: 0.9rem; }
 }
 
 @media (max-width: 1024px) {
@@ -1845,6 +1848,11 @@ p { color: var(--ink-500); }
   .timeline-step { border-right: 0 !important; border-bottom: 1px solid rgba(23, 37, 28, 0.14); padding: 1.4rem 0.4rem; }
   .timeline-step:last-child { border-bottom: 0; }
   .hero-title { font-size: clamp(2.2rem, 10vw, 2.8rem); }
+  .header-inner { gap: 0.6rem; }
+  .brand img { height: 40px; }
+  .theme-toggle { width: 34px; height: 34px; }
+  .lang-toggle { padding: 0.4rem 0.7rem; }
+}
 }
 
 /* 23. MOVIMIENTO REDUCIDO ---------------------------------------------------------------------------- */
