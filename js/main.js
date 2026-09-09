@@ -80,6 +80,33 @@
     });
   }
 
+  /* 2c. Modo día / noche */
+  const themeToggle = $('#themeToggle');
+  if (themeToggle) {
+    const applyTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeToggle.setAttribute('aria-pressed', theme === 'night' ? 'true' : 'false');
+      themeToggle.setAttribute('aria-label', theme === 'night' ? t('Cambiar a modo día') : t('Cambiar a modo noche'));
+    };
+    let theme = 'day';
+    try {
+      theme = document.documentElement.getAttribute('data-theme') === 'night' ? 'night' : 'day';
+    } catch (e) { /* por defecto día */ }
+    applyTheme(theme);
+    themeToggle.addEventListener('click', () => {
+      theme = theme === 'night' ? 'day' : 'night';
+      applyTheme(theme);
+      try { localStorage.setItem('ichu-theme', theme); } catch (e) { /* sin persistencia */ }
+    });
+  }
+
+  /* 2d. Video de fondo del hero: pausa si el usuario prefiere menos movimiento */
+  const heroVideo = $('#heroVideo');
+  if (heroVideo && prefersReduced) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
+
   /* 3. Animaciones de aparición */
   const revealEls = $$('.reveal');
   if (prefersReduced || !('IntersectionObserver' in window)) {

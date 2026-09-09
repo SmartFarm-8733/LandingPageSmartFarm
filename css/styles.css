@@ -1496,6 +1496,11 @@ p { color: var(--ink-500); }
   font-weight: 800;
   font-size: 0.8rem;
 }
+.phone-avatar img {
+  width: 26px;
+  height: auto;
+  display: block;
+}
 .phone-title { display: block; color: var(--cream-text); font-weight: 700; font-size: 0.82rem; line-height: 1.2; }
 .phone-status { display: block; color: var(--gold-500); font-size: 0.68rem; }
 
@@ -1605,7 +1610,29 @@ p { color: var(--ink-500); }
     var(--forest-900);
 }
 .final-cta .frond { color: var(--cream-text); opacity: 0.07; }
-.final-cta .container { position: relative; z-index: 1; }
+.final-cta .container { position: relative; z-index: 2; }
+
+/* Fondos a sangre: video en el hero e imagen en el CTA final */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.cta-bg { position: absolute; inset: 0; z-index: 0; }
+.cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(8, 17, 12, 0.78), rgba(8, 17, 12, 0.42) 45%, rgba(8, 17, 12, 0.8));
+}
 .final-cta h2 { color: var(--cream-text); font-size: clamp(2.4rem, 4.6vw, 4rem); margin-bottom: 1.4rem; }
 .final-cta p {
   max-width: 620px;
@@ -1647,11 +1674,37 @@ p { color: var(--ink-500); }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 0.8rem;
   padding-top: 1.6rem;
   font-size: 0.78rem;
   color: rgba(244, 241, 228, 0.4);
 }
+
+/* Redes sociales del footer */
+.footer-social { display: flex; gap: 0.6rem; }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(244, 241, 228, 0.06);
+  border: 1px solid var(--line-light);
+  color: var(--cream-text);
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.social-btn:hover {
+  color: var(--gold-500);
+  border-color: rgba(228, 184, 66, 0.5);
+  background: rgba(228, 184, 66, 0.1);
+  transform: translateY(-2px);
+}
+.social-btn:focus-visible { outline: 2px solid var(--gold-500); outline-offset: 2px; }
+.social-btn svg { width: 17px; height: 17px; }
+.brand-logo { width: 16px; height: 16px; }
+.x-logo { width: 15px; height: 15px; }
 
 /* 20. MODAL -------------------------------------------------------------------------------------- */
 .modal-overlay {
@@ -1804,3 +1857,152 @@ p { color: var(--ink-500); }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================================
+   21. MODO NOCHE — la paleta dia vive en :root; aqui se reasignan tokens
+   ========================================================================== */
+html[data-theme='night'] {
+  --forest-950: #050806;
+  --forest-900: #0a0f0b;
+  --forest-800: #0e1510;
+  --forest-700: #121a15;
+  --forest-600: #17221b;
+  --gold-700: #d9a93c;
+  --cream-50: #101813;
+  --cream-100: #141d17;
+  --cream-200: #18221b;
+  --paper: #0a0f0b;
+  --ink-900: #ece7d8;
+  --ink-700: #c6c0ac;
+  --ink-500: #9a9480;
+  --line-dark: rgba(244, 241, 228, 0.14);
+}
+
+html[data-theme='night'] { color-scheme: dark; }
+
+/* Transicion suave al alternar */
+body,
+.who-section,
+.problem-section,
+.flow-section,
+.story-section,
+.alerts-section,
+.map-section,
+.trust-section,
+.tech-section,
+.contact-section,
+.final-cta,
+.site-footer,
+.media-section,
+.how-page,
+.contact-card,
+.modal-card,
+.mobile-drawer {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Superficies claras fijas -> oscuras */
+html[data-theme='night'] .form-group input,
+html[data-theme='night'] .form-group select,
+html[data-theme='night'] .form-group textarea {
+  background-color: var(--forest-800);
+  border-color: rgba(244, 241, 228, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+/* Etiquetas y textos verdes sobre superficies oscuras */
+html[data-theme='night'] .form-group label,
+html[data-theme='night'] .tablet-head h3,
+html[data-theme='night'] .tablet-stats strong,
+html[data-theme='night'] .trust-name { color: var(--ink-900); }
+html[data-theme='night'] .disclaimer strong { color: var(--gold-500); }
+html[data-theme='night'] .ok { color: #46d68d !important; }
+
+/* Iconos del stepper de valor */
+html[data-theme='night'] .flow-icon {
+  background: rgba(244, 241, 228, 0.07);
+  border-color: rgba(244, 241, 228, 0.18);
+  color: var(--gold-500);
+}
+html[data-theme='night'] .form-group input::placeholder,
+html[data-theme='night'] .form-group textarea::placeholder { color: rgba(236, 231, 216, 0.4); }
+html[data-theme='night'] .form-group input:hover,
+html[data-theme='night'] .form-group select:hover,
+html[data-theme='night'] .form-group textarea:hover { border-color: rgba(244, 241, 228, 0.38); }
+html[data-theme='night'] .form-group select:invalid { color: rgba(236, 231, 216, 0.45); }
+html[data-theme='night'] .form-group select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ece7d8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+html[data-theme='night'] .form-group .is-invalid {
+  border-color: #e2604f;
+  background: rgba(226, 96, 79, 0.08);
+  box-shadow: 0 0 0 4px rgba(226, 96, 79, 0.15);
+}
+html[data-theme='night'] .field-error { color: #ff8d7e; }
+
+html[data-theme='night'] .tablet-screen,
+html[data-theme='night'] .phone-screen,
+html[data-theme='night'] .phone-chips,
+html[data-theme='night'] .phone-inputbar { background: #0f1812; }
+html[data-theme='night'] .phone-chips,
+html[data-theme='night'] .phone-inputbar { border-color: rgba(244, 241, 228, 0.12); }
+html[data-theme='night'] .bubble.in {
+  background-color: var(--forest-800);
+  border-color: rgba(244, 241, 228, 0.14);
+}
+html[data-theme='night'] .chip {
+  color: var(--gold-500);
+  background: rgba(228, 184, 66, 0.1);
+}
+html[data-theme='night'] .phone-inputbar input {
+  background: var(--forest-900);
+  border-color: rgba(244, 241, 228, 0.2);
+  color: var(--ink-900);
+}
+
+/* Bordes oscuros fijos -> claros */
+html[data-theme='night'] .timeline,
+html[data-theme='night'] .alerts-grid { border-color: rgba(244, 241, 228, 0.16); }
+html[data-theme='night'] .timeline-step,
+html[data-theme='night'] .alert-card { border-color: rgba(244, 241, 228, 0.14); }
+html[data-theme='night'] .trust-card {
+  background-color: var(--forest-800);
+  border-color: rgba(244, 241, 228, 0.14);
+}
+
+/* Enlaces sobre secciones oscuras */
+html[data-theme='night'] .media-link {
+  border-color: rgba(228, 184, 66, 0.55);
+  color: var(--gold-500);
+}
+html[data-theme='night'] .media-link:hover {
+  background: rgba(228, 184, 66, 0.12);
+  color: var(--gold-500);
+}
+
+/* Boton dia/noche */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: rgba(244, 241, 228, 0.06);
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  color: var(--cream-text);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.theme-toggle:hover {
+  color: var(--gold-500);
+  border-color: rgba(228, 184, 66, 0.5);
+  background: rgba(228, 184, 66, 0.1);
+}
+.theme-toggle svg { width: 16px; height: 16px; color: var(--gold-500); }
+.theme-toggle:focus-visible { outline: 2px solid var(--gold-500); outline-offset: 2px; }
+.theme-ic { display: inline-flex; }
+.theme-ic-sun { display: none; }
+html[data-theme='night'] .theme-ic-sun { display: inline-flex; }
+html[data-theme='night'] .theme-ic-moon { display: none; }

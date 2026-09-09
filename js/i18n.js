@@ -23,6 +23,10 @@
     'Bajar a la siguiente sección': 'Scroll to next section',
     'Cambiar idioma: español': 'Switch language: Spanish',
     'Cambiar idioma: inglés': 'Switch language: English',
+    'Cambiar a modo noche': 'Switch to night mode',
+    'Cambiar a modo día': 'Switch to day mode',
+    'Redes sociales': 'Social media',
+    'Sitio web': 'Website',
 
     // --- Navegación ----------------------------------------------------------
     'Inicio': 'Home',
