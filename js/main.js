@@ -11,6 +11,8 @@
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+  const I18N = window.ICHU_I18N || { lang: 'es', t: (text) => text };
+  const t = (text) => I18N.t(text);
 
   /* 1. Cabecera: transparente arriba, verde al bajar (oculta la barra superior) */
   const siteTop = $('#siteTop');
@@ -49,6 +51,34 @@
   closeDrawerBtn.addEventListener('click', closeDrawer);
   drawerOverlay.addEventListener('click', closeDrawer);
   $$('.drawer-link', drawer).forEach((link) => link.addEventListener('click', closeDrawer));
+
+  /* 2b. Submenús de cabecera (Quiénes somos, Tecnología) */
+  const navDrops = $$('.nav-dropdown');
+  navDrops.forEach((drop) => {
+    const toggle = $('.nav-drop-toggle', drop);
+    if (!toggle) return;
+    const setOpen = (open) => {
+      drop.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    toggle.addEventListener('click', () => setOpen(!drop.classList.contains('is-open')));
+    $$('.nav-drop-menu a', drop).forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  });
+  if (navDrops.length) {
+    const closeAllDrops = () => {
+      navDrops.forEach((drop) => {
+        drop.classList.remove('is-open');
+        const toggle = $('.nav-drop-toggle', drop);
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    };
+    document.addEventListener('click', (e) => {
+      navDrops.forEach((drop) => { if (!drop.contains(e.target)) drop.classList.remove('is-open'); });
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllDrops();
+    });
+  }
 
   /* 3. Animaciones de aparición */
   const revealEls = $$('.reveal');
@@ -133,7 +163,7 @@
     }
     const typing = document.createElement('div');
     typing.className = 'bubble in typing';
-    typing.textContent = 'ICHU está escribiendo...';
+    typing.textContent = t('ICHU está escribiendo...');
     phoneChat.appendChild(typing);
     phoneChat.scrollTop = phoneChat.scrollHeight;
     setTimeout(() => {
@@ -145,15 +175,15 @@
   function botResponse(text) {
     const lower = text.toLowerCase();
     if (/(ganadero|vaca|toro|hato|campo|pastoreo)/.test(lower)) {
-      return '¡Excelente! En la demo te mostraremos cómo registrar tu ganado por arete, supervisar el pastoreo y recibir alertas de temperatura al instante.';
+      return t('¡Excelente! En la demo te mostraremos cómo registrar tu ganado por arete, supervisar el pastoreo y recibir alertas de temperatura al instante.');
     }
     if (/(veterinario|salud|clínico|clinico|tratamiento|historial)/.test(lower)) {
-      return '¡Perfecto! Podrás explorar el historial térmico, la bitácora de visitas y el registro de tratamientos.';
+      return t('¡Perfecto! Podrás explorar el historial térmico, la bitácora de visitas y el registro de tratamientos.');
     }
     if (/(sensor|arete|iot|dispositivo)/.test(lower)) {
-      return 'Nuestros dispositivos están diseñados para telemetría en altitud y clima andino.';
+      return t('Nuestros dispositivos están diseñados para telemetría en altitud y clima andino.');
     }
-    return '¡Mensaje recibido! Agendemos tu demostración personalizada: deja tus datos en el formulario para coordinar.';
+    return t('¡Mensaje recibido! Agendemos tu demostración personalizada: deja tus datos en el formulario para coordinar.');
   }
 
   function handleUserMessage() {
@@ -191,7 +221,7 @@
     const errorEl = $(`#err-${id}`);
     input.classList.toggle('is-invalid', Boolean(message));
     input.setAttribute('aria-invalid', message ? 'true' : 'false');
-    if (errorEl) errorEl.textContent = message || '';
+    if (errorEl) errorEl.textContent = message ? t(message) : '';
   }
 
   function validateForm(data) {
@@ -221,13 +251,13 @@
       }
 
       const lines = [
-        'Hola ICHU, quiero solicitar una demostración.',
-        `Nombre: ${data.nombre} ${data.apellidos}`,
-        `Correo: ${data.correo}`,
-        `Teléfono: ${data.telefono}`,
-        `Perfil: ${data.tipoUsuario}`,
+        t('Hola ICHU, quiero solicitar una demostración.'),
+        `${t('Nombre')}: ${data.nombre} ${data.apellidos}`,
+        `${t('Correo')}: ${data.correo}`,
+        `${t('Teléfono')}: ${data.telefono}`,
+        `${t('Perfil')}: ${data.tipoUsuario}`,
       ];
-      if (data.mensaje && data.mensaje.trim()) lines.push(`Mensaje: ${data.mensaje.trim()}`);
+      if (data.mensaje && data.mensaje.trim()) lines.push(`${t('Mensaje')}: ${data.mensaje.trim()}`);
 
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
       window.open(waUrl, '_blank', 'noopener');
@@ -239,8 +269,8 @@
         closeModalBtn.focus();
       }
       form.reset();
-      addBubble(`Hola, soy ${data.nombre}. Solicité una demostración desde el formulario.`, 'out');
-      reply(`¡Hola ${data.nombre}! Registramos tu solicitud. Te contactaremos muy pronto.`);
+      addBubble(t('Hola, soy {n}. Solicité una demostración desde el formulario.').replace('{n}', data.nombre), 'out');
+      reply(t('¡Hola {n}! Registramos tu solicitud. Te contactaremos muy pronto.').replace('{n}', data.nombre));
     });
 
     ['nombre', 'apellidos', 'correo', 'telefono', 'tipoUsuario'].forEach((id) => {

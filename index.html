@@ -87,10 +87,16 @@
           <span class="nav-main">Inicio</span>
           <span class="nav-sub">Conoce ICHU +</span>
         </a>
-        <a class="nav-item" href="#quienes-somos">
-          <span class="nav-main">Quiénes somos</span>
-          <span class="nav-sub">Nuestro propósito</span>
-        </a>
+        <div class="nav-item nav-dropdown">
+          <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-main">Quiénes somos <i data-lucide="chevron-down" class="nav-caret"></i></span>
+            <span class="nav-sub">Nuestro propósito</span>
+          </button>
+          <div class="nav-drop-menu" role="menu" aria-label="Submenú de Quiénes somos">
+            <a role="menuitem" href="#quienes-somos"><span>Nuestro propósito</span><small>Quiénes somos</small></a>
+            <a role="menuitem" href="media.html"><span>Web y Media</span><small>Videos informativos</small></a>
+          </div>
+        </div>
         <a class="nav-item" href="#para-ganaderos">
           <span class="nav-main">Ganaderos</span>
           <span class="nav-sub">Control de tu hato</span>
@@ -99,15 +105,26 @@
           <span class="nav-main">Veterinarios</span>
           <span class="nav-sub">Historial clínico</span>
         </a>
-        <a class="nav-item" href="#tecnologia">
-          <span class="nav-main">Tecnología</span>
-          <span class="nav-sub">Sensores IoT</span>
-        </a>
+        <div class="nav-item nav-dropdown">
+          <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-main">Tecnología <i data-lucide="chevron-down" class="nav-caret"></i></span>
+            <span class="nav-sub">Sensores IoT</span>
+          </button>
+          <div class="nav-drop-menu" role="menu" aria-label="Submenú de Tecnología">
+            <a role="menuitem" href="#tecnologia"><span>Sensores IoT</span><small>Tecnología</small></a>
+            <a role="menuitem" href="como-funciona.html"><span>Cómo funciona</span><small>Paso a paso</small></a>
+          </div>
+        </div>
         <a class="nav-item" href="#contacto">
           <span class="nav-main">Contacto</span>
           <span class="nav-sub">Trabajemos juntos</span>
         </a>
       </nav>
+
+      <button class="lang-toggle" id="langToggle" type="button" data-i18n-skip aria-label="Cambiar idioma: inglés" aria-pressed="false">
+        <i data-lucide="globe"></i>
+        <span class="lang-code">ES</span>
+      </button>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileDrawer">
         <span></span><span></span><span></span>
@@ -126,9 +143,11 @@
     <nav class="drawer-links" aria-label="Navegación móvil">
       <a href="#inicio" class="drawer-link">Inicio</a>
       <a href="#quienes-somos" class="drawer-link">Quiénes somos</a>
+      <a href="media.html" class="drawer-link">Web y Media</a>
       <a href="#para-ganaderos" class="drawer-link">Para ganaderos</a>
       <a href="#para-veterinarios" class="drawer-link">Para veterinarios</a>
       <a href="#tecnologia" class="drawer-link">Tecnología</a>
+      <a href="como-funciona.html" class="drawer-link">Cómo funciona</a>
       <a href="#contacto" class="drawer-link">Contacto</a>
     </nav>
     <a href="#contacto" class="btn btn-gold btn-block">
@@ -363,7 +382,7 @@
 
           <div class="split-visual">
             <figure class="split-photo">
-              <img src="img/ganadero.webp" width="678" height="452" alt="Ganadero junto a su vacuno en el campo" loading="lazy" decoding="async">
+              <img src="img/vaca-holstein.webp" width="1200" height="638" alt="Vaca Holstein en el potrero" loading="lazy" decoding="async">
             </figure>
             <div class="tablet">
               <div class="tablet-screen">
@@ -404,7 +423,7 @@
 
           <div class="split-visual">
             <figure class="split-photo">
-              <img src="img/veterinario.webp" width="447" height="447" alt="Médico veterinario realizando chequeo en manga de manejo" loading="lazy" decoding="async">
+              <img src="img/vaca-lechera-ternero.webp" width="1200" height="638" alt="Vaca lechera con su ternero en el tambo" loading="lazy" decoding="async">
             </figure>
             <div class="tablet tablet-vet">
               <div class="tablet-screen">
@@ -439,7 +458,7 @@
       <div class="container">
         <div class="story-intro reveal">
           <figure class="story-photo">
-            <img src="img/ternero.webp" width="720" height="943" alt="Ternero descansando plácidamente en el establo" loading="lazy" decoding="async">
+            <img src="img/veterinaria-ternero.webp" width="1200" height="800" alt="Veterinaria revisando la salud de un ternero con estetoscopio" loading="lazy" decoding="async">
           </figure>
           <div class="story-text">
             <span class="kicker">Trazabilidad y bienestar</span>
@@ -777,7 +796,8 @@
           <span class="footer-title">Navegación</span>
           <ul class="footer-links">
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="media.html">Web y Media</a></li>
+            <li><a href="como-funciona.html">Cómo funciona</a></li>
             <li><a href="#para-ganaderos">Para ganaderos</a></li>
             <li><a href="#para-veterinarios">Para veterinarios</a></li>
             <li><a href="#tecnologia">Tecnología</a></li>
@@ -815,6 +835,7 @@
   </div>
 
   <script defer src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <script defer src="js/i18n.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

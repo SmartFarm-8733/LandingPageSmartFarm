@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web y Media — ICHU · Videos informativos</title>
+  <meta name="description" content="Videos informativos de ICHU: recorridos por la plataforma, historias del campo y el acompañamiento veterinario en el Perú.">
+  <meta name="theme-color" content="#143527">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Web y Media — ICHU · Videos informativos">
+  <meta property="og:description" content="Recorridos por la plataforma y desde el terreno: fichas digitales, pastoreo y acompañamiento veterinario contados en video.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:locale" content="es_PE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="ICHU_logo_pack/ICHU_Monograma_Transparente.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@1,600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#web-media">Saltar al contenido</a>
+
+  <!-- Motivo decorativo: hoja andina (símbolo reutilizable) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <symbol id="leaf-frond" viewBox="0 0 140 140">
+      <path d="M6 134 C 46 104, 96 54, 134 6" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M28 112 Q 12 84 22 62 Q 44 86 28 112 Z"/>
+      <path d="M46 94 Q 36 60 50 40 Q 66 70 46 94 Z"/>
+      <path d="M66 74 Q 62 40 80 22 Q 88 52 66 74 Z"/>
+      <path d="M88 54 Q 90 24 110 10 Q 110 38 88 54 Z"/>
+      <path d="M24 124 Q 44 122 58 108 Q 40 100 24 124 Z"/>
+      <path d="M44 106 Q 66 108 82 96 Q 62 84 44 106 Z"/>
+      <path d="M66 86 Q 90 90 108 80 Q 88 66 66 86 Z"/>
+      <path d="M90 66 Q 114 70 130 62 Q 112 48 90 66 Z"/>
+    </symbol>
+  </svg>
+
+  <!-- ======================================================================
+       BARRA SUPERIOR + HEADER SÓLIDO (navegación de dos niveles)
+  ====================================================================== -->
+  <div class="site-top solid" id="siteTop">
+    <div class="utility-bar">
+    <div class="container utility-inner">
+      <span class="utility-note">Tecnología para la ganadería inteligente · Perú</span>
+      <div class="utility-actions">
+        <a class="utility-link" href="https://wa.me/51900000000" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i><span>WhatsApp</span>
+        </a>
+        <a class="utility-link" href="mailto:hola@ichu.pe">
+          <i data-lucide="mail"></i><span>hola@ichu.pe</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="ICHU - Inicio">
+        <img src="ICHU_logo_pack/ICHU_Principal_Transparente.png" alt="Logotipo ICHU" width="46" height="46">
+        <span class="brand-copy">
+          <strong>ICHU</strong>
+          <small>Plataforma ganadera para todos</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-item" href="index.html">
+          <span class="nav-main">Inicio</span>
+          <span class="nav-sub">Conoce ICHU +</span>
+        </a>
+        <div class="nav-item nav-dropdown is-active">
+          <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-main">Quiénes somos <i data-lucide="chevron-down" class="nav-caret"></i></span>
+            <span class="nav-sub">Nuestro propósito</span>
+          </button>
+          <div class="nav-drop-menu" role="menu" aria-label="Submenú de Quiénes somos">
+            <a role="menuitem" href="index.html#quienes-somos"><span>Nuestro propósito</span><small>Quiénes somos</small></a>
+            <a role="menuitem" href="media.html" aria-current="page"><span>Web y Media</span><small>Videos informativos</small></a>
+          </div>
+        </div>
+        <a class="nav-item" href="index.html#para-ganaderos">
+          <span class="nav-main">Ganaderos</span>
+          <span class="nav-sub">Control de tu hato</span>
+        </a>
+        <a class="nav-item" href="index.html#para-veterinarios">
+          <span class="nav-main">Veterinarios</span>
+          <span class="nav-sub">Historial clínico</span>
+        </a>
+        <div class="nav-item nav-dropdown">
+          <button class="nav-drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-main">Tecnología <i data-lucide="chevron-down" class="nav-caret"></i></span>
+            <span class="nav-sub">Sensores IoT</span>
+          </button>
+          <div class="nav-drop-menu" role="menu" aria-label="Submenú de Tecnología">
+            <a role="menuitem" href="index.html#tecnologia"><span>Sensores IoT</span><small>Tecnología</small></a>
+            <a role="menuitem" href="como-funciona.html"><span>Cómo funciona</span><small>Paso a paso</small></a>
+          </div>
+        </div>
+        <a class="nav-item" href="index.html#contacto">
+          <span class="nav-main">Contacto</span>
+          <span class="nav-sub">Trabajemos juntos</span>
+        </a>
+      </nav>
+
+      <button class="lang-toggle" id="langToggle" type="button" data-i18n-skip aria-label="Cambiar idioma: inglés" aria-pressed="false">
+        <i data-lucide="globe"></i>
+        <span class="lang-code">ES</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  </div>
+
+  <!-- Menú móvil -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú móvil" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">Menú</span>
+      <button class="drawer-close" id="closeDrawer" aria-label="Cerrar menú"><i data-lucide="x"></i></button>
+    </div>
+    <nav class="drawer-links" aria-label="Navegación móvil">
+      <a href="index.html" class="drawer-link">Inicio</a>
+      <a href="index.html#quienes-somos" class="drawer-link">Quiénes somos</a>
+      <a href="media.html" class="drawer-link" aria-current="page">Web y Media</a>
+      <a href="index.html#para-ganaderos" class="drawer-link">Para ganaderos</a>
+      <a href="index.html#para-veterinarios" class="drawer-link">Para veterinarios</a>
+      <a href="index.html#tecnologia" class="drawer-link">Tecnología</a>
+      <a href="como-funciona.html" class="drawer-link">Cómo funciona</a>
+      <a href="index.html#contacto" class="drawer-link">Contacto</a>
+    </nav>
+    <a href="index.html#contacto" class="btn btn-gold btn-block">
+      <span>Solicitar una demostración</span>
+    </a>
+  </aside>
+
+  <main id="main">
+
+    <!-- ====================================================================
+         WEB Y MEDIA — videos informativos
+    ==================================================================== -->
+    <section id="web-media" class="media-section media-page">
+      <svg class="frond frond-tr" aria-hidden="true"><use href="#leaf-frond"></use></svg>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">ICHU · Web y Media</span>
+          <h2>Videos informativos de ICHU.</h2>
+          <span class="rule"></span>
+          <p class="section-lead">Recorridos por la plataforma y desde el terreno: fichas digitales, pastoreo y acompañamiento veterinario contados en video.</p>
+        </div>
+
+        <article class="media-block reveal">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Recorrido por la plataforma ICHU (video de ejemplo)" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <span class="photo-chip video-chip">01 · Web</span>
+          </div>
+          <div class="media-content">
+            <span class="kicker">Web · Recorrido del producto</span>
+            <h3>La plataforma, parte por parte.</h3>
+            <p>Descubre cómo ICHU convierte el registro diario en decisiones oportunas: de la ficha digital de cada ejemplar al mapa de pastoreo del hato completo.</p>
+            <ul class="mini-checks">
+              <li><i data-lucide="check"></i>Ficha clínica y productiva por animal</li>
+              <li><i data-lucide="check"></i>Mapa de lotes, aguadas y pastoreo</li>
+              <li><i data-lucide="check"></i>Alertas tempranas en la app y el tablet</li>
+            </ul>
+            <a class="media-link" href="https://youtu.be/aqz-KE-bpKQ" target="_blank" rel="noopener">
+              <span>Ver en YouTube</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="media-block reveal">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/LXb3EKWsInQ" title="Historias del campo con ICHU (video de ejemplo)" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <span class="photo-chip video-chip">02 · Media</span>
+          </div>
+          <div class="media-content">
+            <span class="kicker">Media · Historias del campo</span>
+            <h3>El campo, en imagen y en voz.</h3>
+            <p>Entrevistas, jornadas veterinarias y el día a día de quienes llevan su hato en ICHU. Historias reales desde el potrero.</p>
+            <ul class="mini-checks">
+              <li><i data-lucide="check"></i>Entrevistas a ganaderos y veterinarios</li>
+              <li><i data-lucide="check"></i>Visitas y jornadas de campo reales</li>
+              <li><i data-lucide="check"></i>Tips sanitarios y de manejo</li>
+            </ul>
+            <a class="media-link" href="https://youtu.be/LXb3EKWsInQ" target="_blank" rel="noopener">
+              <span>Ver en YouTube</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+  ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="ICHU_logo_pack/ICHU_Principal_Transparente.png" alt="Logotipo ICHU" width="140" height="44" loading="lazy">
+          <p>Tecnología para la ganadería inteligente. Conectando al ganadero con información útil sobre cada animal y facilitando el trabajo veterinario en el Perú.</p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <span class="footer-title">Navegación</span>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="como-funciona.html">Cómo funciona</a></li>
+            <li><a href="media.html" aria-current="page">Web y Media</a></li>
+            <li><a href="index.html#para-ganaderos">Para ganaderos</a></li>
+            <li><a href="index.html#para-veterinarios">Para veterinarios</a></li>
+            <li><a href="index.html#tecnologia">Tecnología</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <span class="footer-title">Fuentes de referencia</span>
+          <ul class="footer-links">
+            <li><a href="https://www.gob.pe/midagri" target="_blank" rel="noopener noreferrer">MIDAGRI Perú</a></li>
+            <li><a href="https://www.gob.pe/senasa" target="_blank" rel="noopener noreferrer">SENASA Sanidad Agraria</a></li>
+            <li><a href="https://ppa.midagri.gob.pe" target="_blank" rel="noopener noreferrer">Padrón de Productores (PPA)</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-title">Identidad</span>
+          <p class="footer-about">Inspirado en el pasto andino <em>ichu</em> y la tradición ganadera del Perú. Diseñado para la realidad y el trabajo diario en el campo.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ICHU — Todos los derechos reservados. Etapa de presentación y demostración de producto.</span>
+        <span>Perú · Tecnología ganadera & acompañamiento veterinario</span>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
