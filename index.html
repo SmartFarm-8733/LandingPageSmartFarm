@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@1,600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -57,7 +57,8 @@
   <!-- ======================================================================
        BARRA SUPERIOR + HEADER SÓLIDO (navegación de dos niveles)
   ====================================================================== -->
-  <div class="utility-bar">
+  <div class="site-top" id="siteTop">
+    <div class="utility-bar">
     <div class="container utility-inner">
       <span class="utility-note">Tecnología para la ganadería inteligente · Perú</span>
       <div class="utility-actions">
@@ -113,6 +114,7 @@
       </button>
     </div>
   </header>
+  </div>
 
   <!-- Menú móvil -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -147,13 +149,9 @@
       <div class="hero-overlay"></div>
 
       <div class="container hero-content reveal">
-        <span class="hero-kicker">
-          <i data-lucide="shield-check"></i>
-          Plataforma ganadera · Perú 2026
-        </span>
         <h1 class="hero-title">
-          Cada animal tiene una historia.
-          <span class="text-gold">ICHU ayuda a contarla.</span>
+          Cada animal tiene una <em class="word-soft">historia.</em>
+          <span class="text-gold"><strong class="ichu-mark">ICHU</strong> ayuda a contarla.</span>
         </h1>
         <p class="hero-lead">
           Tecnología pensada para la ganadería que conecta la información de cada ejemplar, del potrero al veterinario.
@@ -366,7 +364,6 @@
           <div class="split-visual">
             <figure class="split-photo">
               <img src="img/ganadero.webp" width="678" height="452" alt="Ganadero junto a su vacuno en el campo" loading="lazy" decoding="async">
-              <figcaption class="photo-chip">Registro de campo · actualizado hoy</figcaption>
             </figure>
             <div class="tablet">
               <div class="tablet-screen">
@@ -408,7 +405,6 @@
           <div class="split-visual">
             <figure class="split-photo">
               <img src="img/veterinario.webp" width="447" height="447" alt="Médico veterinario realizando chequeo en manga de manejo" loading="lazy" decoding="async">
-              <figcaption class="photo-chip">Evaluación sanitaria · corral</figcaption>
             </figure>
             <div class="tablet tablet-vet">
               <div class="tablet-screen">
@@ -586,16 +582,9 @@
         <div class="map-card reveal">
           <div class="map-visual">
             <picture>
-              <source media="(max-width: 700px)" srcset="img/parcela-960.webp">
-              <img src="img/parcela.webp" width="1600" height="1095" alt="Vista aérea de las parcelas y sectores del predio" loading="lazy" decoding="async">
+              <source media="(max-width: 700px)" srcset="img/mapa-predio-960.webp">
+              <img src="img/mapa-predio.webp" width="1600" height="1095" alt="Mapa del predio con lotes de pastoreo, puntos de agua y estado del pastizal" loading="lazy" decoding="async">
             </picture>
-            <span class="map-caption"><i></i>Vista del predio</span>
-            <span class="map-marker marker-a">Pastoreo</span>
-            <span class="map-marker marker-b">Aguada</span>
-            <div class="map-panel-float">
-              <span>Hato en campo</span>
-              <strong>24 ejemplares · 98% en estado óptimo</strong>
-            </div>
           </div>
 
           <div class="map-info">

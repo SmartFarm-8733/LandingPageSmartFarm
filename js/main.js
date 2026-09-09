@@ -12,10 +12,10 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-  /* 1. Header con sombra al hacer scroll */
-  const header = $('#siteHeader');
+  /* 1. Cabecera: transparente arriba, verde al bajar (oculta la barra superior) */
+  const siteTop = $('#siteTop');
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 8);
+    siteTop.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
   /* 2. Menú móvil accesible */
