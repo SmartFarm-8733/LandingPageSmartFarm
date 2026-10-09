@@ -28,6 +28,62 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
+  <style>
+    /* Equipo SmartFarm: estilos locales, basados en los tokens de la landing. */
+    .members-section {
+      position: relative;
+      padding: clamp(4rem, 7vw, 6.5rem) 0;
+      overflow: hidden;
+      background: var(--cream-50);
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+    .members-section .frond { color: var(--ink-900); }
+    .members-section .container { position: relative; z-index: 1; }
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .member-card {
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line-dark);
+      border-top: 4px solid var(--gold-500);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      transition: opacity 0.7s ease, transform 0.7s ease,
+                  box-shadow 0.28s ease, background-color 0.35s ease;
+    }
+    .member-card:hover { box-shadow: var(--shadow-md); }
+    .member-photo {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+    .member-caption {
+      padding: 1.35rem 1.25rem;
+      border-top: 1px solid var(--line-dark);
+      text-align: center;
+    }
+    .member-caption h3 {
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    .members-copy-en { display: none; }
+    html[lang="en"] .members-copy-es { display: none; }
+    html[lang="en"] .members-copy-en { display: inline; }
+    @media (max-width: 900px) {
+      .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .members-grid { grid-template-columns: minmax(0, 1fr); max-width: 340px; }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -99,6 +155,7 @@
           </button>
           <div class="nav-drop-menu" role="menu" aria-label="Submenú de Quiénes somos">
             <a role="menuitem" href="#quienes-somos"><span>Nuestro propósito</span><small>Quiénes somos</small></a>
+            <a role="menuitem" href="#integrantes-smartfarm" data-i18n-skip><span><span class="members-copy-es" lang="es">Nuestro equipo</span><span class="members-copy-en" lang="en">Our team</span></span><small>SmartFarm</small></a>
             <a role="menuitem" href="media.html"><span>Web y Media</span><small>Videos informativos</small></a>
           </div>
         </div>
@@ -153,6 +210,7 @@
     <nav class="drawer-links" aria-label="Navegación móvil">
       <a href="#inicio" class="drawer-link">Inicio</a>
       <a href="#quienes-somos" class="drawer-link">Quiénes somos</a>
+      <a href="#integrantes-smartfarm" class="drawer-link" data-i18n-skip><span class="members-copy-es" lang="es">Equipo SmartFarm</span><span class="members-copy-en" lang="en">SmartFarm team</span></a>
       <a href="media.html" class="drawer-link">Web y Media</a>
       <a href="#para-ganaderos" class="drawer-link">Para ganaderos</a>
       <a href="#para-veterinarios" class="drawer-link">Para veterinarios</a>
@@ -256,6 +314,60 @@
             <i data-lucide="arrow-right"></i>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTEGRANTES DE SMARTFARM — equipo detrás de ICHU
+    ==================================================================== -->
+    <section id="integrantes-smartfarm" class="members-section" aria-labelledby="members-title" data-i18n-skip>
+      <svg class="frond frond-tr" aria-hidden="true"><use href="#leaf-frond"></use></svg>
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker"><span class="members-copy-es" lang="es">Las personas detrás de ICHU</span><span class="members-copy-en" lang="en">The people behind ICHU</span></span>
+          <h2 id="members-title"><span class="members-copy-es" lang="es">Integrantes del SmartFarm</span><span class="members-copy-en" lang="en">SmartFarm team members</span></h2>
+          <span class="rule"></span>
+          <p class="section-lead"><span class="members-copy-es" lang="es">Conoce al equipo que desarrolla ICHU y conecta la tecnología con las necesidades de la ganadería peruana.</span><span class="members-copy-en" lang="en">Meet the team developing ICHU and connecting technology with the needs of livestock farming in Peru.</span></p>
+        </div>
+
+        <ul class="members-grid" role="list">
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/alison-arrieta.jpg" alt="Alison Arrieta" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Alison Arrieta</h3></figcaption>
+            </figure>
+          </li>
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/diego-avalos-cordova.jpg" alt="Diego Ávalos Córdova" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Diego Ávalos Córdova</h3></figcaption>
+            </figure>
+          </li>
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/flor-contreras.jpg" alt="Flor Contreras" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Flor Contreras</h3></figcaption>
+            </figure>
+          </li>
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/giorgio-awad-vargas.jpg" alt="Giorgio Awad Vargas" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Giorgio Awad Vargas</h3></figcaption>
+            </figure>
+          </li>
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/jhimy-romero-meza.jpg" alt="Jhimy Romero Meza" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Jhimy Romero Meza</h3></figcaption>
+            </figure>
+          </li>
+          <li class="member-card reveal">
+            <figure>
+              <img class="member-photo" src="img/members/manuel-sanchez.jpg" alt="Manuel Sánchez" width="600" height="800" loading="lazy" decoding="async">
+              <figcaption class="member-caption"><h3>Manuel Sánchez</h3></figcaption>
+            </figure>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -790,6 +902,7 @@
           <span class="footer-title">Navegación</span>
           <ul class="footer-links">
             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#integrantes-smartfarm" data-i18n-skip><span class="members-copy-es" lang="es">Equipo SmartFarm</span><span class="members-copy-en" lang="en">SmartFarm team</span></a></li>
             <li><a href="media.html">Web y Media</a></li>
             <li><a href="como-funciona.html">Cómo funciona</a></li>
             <li><a href="#para-ganaderos">Para ganaderos</a></li>
